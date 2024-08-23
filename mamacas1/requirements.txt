@@ -1,0 +1,4 @@
+Django
+django-mama-cas
+python-decouple
+psycopg2
