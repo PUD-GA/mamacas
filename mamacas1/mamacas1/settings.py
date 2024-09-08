@@ -56,7 +56,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['https://tadddam.univ-grenoble-alpes.fr/public/']
+CORS_ALLOWED_ORIGINS = ['https://tadddam.univ-grenoble-alpes.fr/public/',
+                        'https://testproxycas.onrender.com/cas',
+                        'https://testclientcas.onrender.com']
 
 ROOT_URLCONF = 'mamacas1.urls'
 
