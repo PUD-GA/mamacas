@@ -144,6 +144,7 @@ MAMA_CAS_SERVICES = [
     {
         'SERVICE': 'https://testclientcas.onrender.com',
         'PROXY_ALLOW': True,
+        'PROXY_PATTERN': 'https://testproxycas.onrender.com/cas',
     },
     {
         'SERVICE': 'https://tadddam.univ-grenoble-alpes.fr/public/',
