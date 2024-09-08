@@ -139,3 +139,13 @@ if not DEBUG:    # Tell Django to copy static assets into a path called `staticf
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MAMA_CAS_SERVICES = [
+    {
+        'SERVICE': 'https://testclientcas.onrender.com',
+        'PROXY_ALLOW': True,
+    },
+    {
+        'SERVICE': 'https://tadddam.univ-grenoble-alpes.fr/public/',
+    },
+]
