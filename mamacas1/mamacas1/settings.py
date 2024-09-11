@@ -143,10 +143,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MAMA_CAS_SERVICES = [
     {
         'SERVICE': 'https://testclientcas.onrender.com',
+        'CALLBACKS': [
+            'mama_cas.callbacks.user_name_attributes',
+        ],
         'PROXY_ALLOW': True,
-        'PROXY_PATTERN': 'https://testproxycas.onrender.com/cas',
+        'PROXY_PATTERN': '^https://testproxycas\.onrender\.com/[^\.]+',
     },
     {
         'SERVICE': 'https://tadddam.univ-grenoble-alpes.fr/public/',
+        'CALLBACKS': [
+            'mama_cas.callbacks.user_name_attributes',
+        ],
     },
 ]
