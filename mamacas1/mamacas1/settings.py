@@ -83,10 +83,12 @@ WSGI_APPLICATION = 'mamacas1.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+URLDB = 'postgresql://' + config("PGUSER") + ':' + config("PGUSERPASS") + '/' + config("PGDATABASE")
+
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/mamacas1',
+        default=URLDB,
         conn_max_age=600)}
 
 
