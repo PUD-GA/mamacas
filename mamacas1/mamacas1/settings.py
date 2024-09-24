@@ -45,10 +45,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -56,7 +56,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['https://tadddam.univ-grenoble-alpes.fr/public']
+#CORS_ALLOWED_ORIGINS = ['https://tadddam.univ-grenoble-alpes.fr/public']
+CORS_ALLOW_ALL_ORIGINS=True
 
 ROOT_URLCONF = 'mamacas1.urls'
 
