@@ -56,9 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['https://tadddam.univ-grenoble-alpes.fr/public/',
-                        'https://testproxycas.onrender.com/cas',
-                        'https://testclientcas.onrender.com']
+CORS_ALLOWED_ORIGINS = ['https://tadddam.univ-grenoble-alpes.fr/public']
 
 ROOT_URLCONF = 'mamacas1.urls'
 
@@ -143,14 +141,6 @@ if not DEBUG:    # Tell Django to copy static assets into a path called `staticf
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MAMA_CAS_SERVICES = [
-    {
-        'SERVICE': 'https://testclientcas.onrender.com',
-        'CALLBACKS': [
-            'mama_cas.callbacks.user_name_attributes',
-        ],
-        'PROXY_ALLOW': True,
-        'PROXY_PATTERN': '^https://testproxycas\.onrender\.com/[^\.]+',
-    },
     {
         'SERVICE': 'https://tadddam.univ-grenoble-alpes.fr/public/',
         'CALLBACKS': [
