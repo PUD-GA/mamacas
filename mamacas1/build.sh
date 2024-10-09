@@ -12,5 +12,5 @@ python manage.py collectstatic --no-input
 python manage.py migrate
 
 # Create superuser with variable in env
-python manage.py createsuperuser --noinput
+#python manage.py createsuperuser --noinput
 
